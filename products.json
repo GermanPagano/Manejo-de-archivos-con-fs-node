@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Producto A",
+    "description": "Excelente unidad a la venta",
+    "price": 200,
+    "thumbnail": "ruta",
+    "codigo": "ABC111",
+    "stock": 4000,
+    "id": 1
+  }
+]

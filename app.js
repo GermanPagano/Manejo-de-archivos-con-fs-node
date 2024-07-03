@@ -1,5 +1,4 @@
 const fs = require('fs')
-const { json } = require('stream/consumers')
 
 class ProductManager {
     // constructor
@@ -13,7 +12,7 @@ class ProductManager {
     // iniciarlizacion del archivo
     initializeFile(){
         if(!fs.existsSync(this.path)){
-            fs.writeFileSync(this.patch, JSON.stringify([]))
+            fs.writeFileSync(this.path, JSON.stringify([]))
         }
     }
 
@@ -34,7 +33,7 @@ class ProductManager {
         product.id = this.nextId
         this.nextId+=1
 
-        products.push(products)
+        products.push(product)
         this.saveProductsToFile(products)
     }
 
@@ -81,3 +80,21 @@ class ProductManager {
     }
 
 }
+
+const manager = new ProductManager('products.json')
+
+//añadir producto
+manager.addProduct({
+    title: "Producto A",
+    description: "Excelente unidad a la venta",
+    price: 200,
+    thumbnail: 'ruta',
+    codigo: "ABC111",
+    stock: 4000
+})
+
+// obtener los productos totales
+
+const todosproductos = manager.getProducts()
+
+console.log(todosproductos)
