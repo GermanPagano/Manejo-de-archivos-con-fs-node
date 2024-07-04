@@ -1,11 +1,20 @@
 [
   {
+    "title": "Producto C",
+    "description": "Excelente unidad a la venta",
+    "price": 10,
+    "thumbnail": "ruta",
+    "codigo": "FG100",
+    "stock": 1,
+    "id": 3
+  },
+  {
     "title": "Producto A",
     "description": "Excelente unidad a la venta",
     "price": 200,
     "thumbnail": "ruta",
     "codigo": "ABC111",
     "stock": 4000,
-    "id": 1
+    "id": 4
   }
 ]
